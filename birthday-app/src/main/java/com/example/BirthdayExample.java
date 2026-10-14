@@ -51,8 +51,8 @@ public class BirthdayExample {
       birthdayMap.put(name, birthday);
 
       // print the names and birthdays
-      System.out.println("name = " + name);
-      System.out.println("birthday = " + birthday);
+      // System.out.println("name = " + name);
+      // System.out.println("birthday = " + birthday);
     }
   }
 
@@ -80,7 +80,13 @@ public class BirthdayExample {
     String name = input.nextLine();
 
     // print user input
-    System.out.println("name = " + name);
+    String birthday = birthdayMap.get(name);
+
+    if (birthday != null) {
+      System.out.println("Birthday: " + birthday);
+    } else {
+      System.out.println("Birthday unknown.");
+    }
 
     // close the scanner
     input.close();
